@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload File</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Import Google Font Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Link to shared CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Your File</h1>
+    <form id="uploadForm">
+      <input type="text" id="customer-name" placeholder="Your Name" required>
+      <input type="file" id="file-input" required>
+      <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
+    <p id="loading-message" class="message loading">Uploading... please wait.</p>
+    <p id="success-message" class="message success">File uploaded successfully!</p>
+    <p id="error-message" class="message error"></p>
+  </div>
+
+  <!-- Load Supabase and Firebase SDKs if needed by upload.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <!-- Link to custom JavaScript file for upload.html -->
+  <script src="upload.js"></script>
+</body>
+</html>

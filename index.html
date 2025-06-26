@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xerox Shop | Secure Upload</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Import Google Font Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Link to shared CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Homepage Section -->
+    <section id="homepage">
+      <h1>Welcome to SendFWS</h1>
+      <p>
+        No need to share your number or email for printing! Simply scan the shop’s QR code, 
+        upload your document, and get your printout securely. Fast, private, and hassle-free!
+      </p>
+      <button onclick="showLoginSection()">Login as Xerox Owner</button>
+      <button onclick="showSignupSection()">Sign Up as Xerox Owner</button>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login-section" class="hidden">
+      <h2>Xerox Owner Login</h2>
+      <form id="loginForm">
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button type="button" onclick="login()">Login</button>
+        <button type="button" onclick="goToHomePage()">Back to Homepage</button>
+        <p id="login-message" class="form-message error"></p>
+      </form>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup-section" class="hidden">
+      <h2>Xerox Owner Sign Up</h2>
+      <form id="signupForm">
+        <input type="email" id="signup-email" placeholder="Email" required />
+        <input type="password" id="signup-password" placeholder="Password (min 6 characters)" required />
+        <button type="button" onclick="signup()">Sign Up</button>
+        <button type="button" onclick="goToHomePage()">Back to Homepage</button>
+        <p id="signup-message" class="form-message error"></p>
+      </form>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard-section" class="hidden">
+      <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <h2>Dashboard</h2>
+          <ul>
+            <li><a href="#" onclick="showQRCodeSection()">Generate QR Code</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+          </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+          <div class="top-bar">
+            <input type="text" class="search-bar" placeholder="Search files..." />
+            <div class="profile">Welcome, Owner!</div>
+          </div>
+          <ul class="file-list" id="file-list">
+            <!-- Files will be dynamically added here -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section id="qr-section" class="hidden">
+      <h2>Generate Your Shop QR Code</h2>
+      <button onclick="generateQRCode()">Generate QR Code</button>
+      <div class="qr-container">
+        <canvas id="qrcode"></canvas>
+      </div>
+      <br />
+      <button onclick="downloadQRCode()">Download QR Code</button>
+      <br />
+      <button onclick="showDashboard()">Back to Dashboard</button>
+    </section>
+  </div>
+
+  <!-- Load Firebase and other SDKs first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <!-- Link to custom JavaScript file for index.html -->
+  <script src="scripts.js"></script>
+</body>
+</html>
