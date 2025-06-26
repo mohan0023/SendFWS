@@ -45,4 +45,4 @@ A secure, QR-based file transfer system – no login required, files auto-delete
 - ✅ Admin-only real-time view of file activity
 
 ### 🛡️ Admin Tracking Dashboard
-![Admin Panel](assets/sendfws-admin.png)
+![Admin Panel](assets/sendfws-admin)
