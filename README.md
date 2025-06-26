@@ -27,13 +27,13 @@ A secure, QR-based file transfer system – no login required, files auto-delete
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Homepage](assets/sendfws-homepage.png)
+![Homepage](assets/sendfws-homepage)
 
 ### 📤 Signup Page
-![Upload Screen](assets/sendfws-signup.png)
+![Upload Screen](assets/sendfws-signup)
 
 ### 📋 New Qr Page
-![Confirmation](assets/sendfws-newqr.png)
+![Confirmation](assets/sendfws-newqr)
 
 ---
 
