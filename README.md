@@ -1,6 +1,6 @@
 # SendFWS 🚀
 
-A secure, QR-based file transfer system – no login required, files auto-delete after print/download.
+A secure, QR-based file transfer system –  login required, files auto-delete after print/download.
 
 🌐 **Live Demo:** [sendfws.web.app](https://sendfws.web.app)
 
